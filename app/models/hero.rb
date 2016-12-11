@@ -1,9 +1,13 @@
 class Hero
-  attr_accessor :name, :power, :biography
-
-  def initilaize(args)
+  attr_accessor :name, :power, :bio
+HEROES=[]
+  def initialize(args)
     @name = args[:name]
     @power = args[:power]
-    @biography = args[:biography]
+    @bio = args[:bio]
+    HEROES<<self
+  end
+  def self.all
+    HEROES
   end
 end
